@@ -1,9 +1,8 @@
 # ライブラリのインポート
 import requests
 
-# URLの設定
-url = "https://www.python.org"
+url = "http://www.python.org/"
+r = requests.get(url, timeout=3, allow_redirects=False)
 
-# サイトにアクセス
-r = requests.get(url)
-print(r)
+print(r.url)
+print(r.status_code)
